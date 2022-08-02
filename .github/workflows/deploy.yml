@@ -19,6 +19,7 @@ jobs:
         # We need to switch to an older verison of ox-hugo until I solve the tomelr issue
         cd ox-hugo
         git checkout ad412e0d2c8b36232abe090893cc731ffb1b8e17
+        cd ..
 
     - name: Setup emacs
       uses: purcell/setup-emacs@v3.0
