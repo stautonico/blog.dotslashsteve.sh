@@ -17,8 +17,9 @@ jobs:
       run: |
         git clone https://github.com/kaushalmodi/ox-hugo.git ox-hugo
         # We need to switch to an older verison of ox-hugo until I solve the tomelr issue
+        # We also apparently can't find ".org-id-locations", which is related to another package
+        # that one of the new packages uses (in the new ox-hugo update)
         cd ox-hugo
-        #git checkout ad412e0d2c8b36232abe090893cc731ffb1b8e17
         git checkout 9751d34
         cd ..
 
@@ -42,4 +43,3 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
         branch: prod
-        folder: /
