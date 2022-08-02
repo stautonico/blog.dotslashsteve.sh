@@ -1,4 +1,0 @@
-baseURL = 'https://blog.dotslashsteve.sh'
-languageCode = 'en-us'
-title = './steve.sh | Blog'
-theme = 'terminal'
