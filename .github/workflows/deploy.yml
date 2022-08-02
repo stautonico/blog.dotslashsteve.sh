@@ -17,7 +17,7 @@ jobs:
       run: git clone https://github.com/kaushalmodi/ox-hugo.git ox-hugo
 
     - name: Setup emacs
-      uses: purcell/setup-emacs@master
+      uses: purcell/setup-emacs@v3.0
       with:
         version: 26.3
 
@@ -25,16 +25,15 @@ jobs:
       run: emacs ./content.org --batch -L ./ox-hugo -l ox-hugo.el --eval='(org-hugo-export-wim-to-md t)' --kill
 
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
+      uses: peaceiris/actions-hugo@v2.4.13
       with:
         hugo-version: 'latest'
 
     - name: Build
       run: hugo --minify
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2
-      env:
-        #ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PUBLISH_BRANCH: prod
-        #PUBLISH_DIR: ./public
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.0
+      with:
+        branch: prod
+        folder: /
