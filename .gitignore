@@ -3,3 +3,9 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+/public/
+.sass-cache
+_site
+.DS_Store
+
+.idea/

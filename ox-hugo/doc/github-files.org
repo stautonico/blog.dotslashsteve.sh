@@ -1,0 +1,71 @@
+#+TITLE: GitHub Ancillary Files
+#+AUTHOR: Kaushal Modi
+
+#+MACRO: commit commit [[https://github.com/kaushalmodi/ox-hugo/commit/$1][$1]]
+#+MACRO: issue #[[https://github.com/kaushalmodi/ox-hugo/issues/$1][$1]]
+#+MACRO: bfissue Blackfriday # [[https://github.com/russross/blackfriday/issues/$1][$1]]
+#+MACRO: hugoissue Hugo #[[https://github.com/gohugoio/hugo/issues/$1][$1]]
+#+MACRO: imageclick [[https://raw.githubusercontent.com/kaushalmodi/ox-hugo/master/doc/static/images/$1][https://raw.githubusercontent.com/kaushalmodi/ox-hugo/master/doc/static/images/$1]]
+#+MACRO: doc [[https://ox-hugo.scripter.co/doc/$1][$2]]
+#+MACRO: travis [[https://travis-ci.org/kaushalmodi/ox-hugo][https://travis-ci.org/kaushalmodi/ox-hugo.svg?branch=master]]
+#+MACRO: melpa [[https://melpa.org/#/ox-hugo][file:https://melpa.org/packages/ox-hugo-badge.svg]]
+#+MACRO: GPLv3 [[https://www.gnu.org/licenses/gpl-3.0][https://img.shields.io/badge/License-GPL%20v3-blue.svg]]
+#+MACRO: gitter [[https://gitter.im/KaushalModi/Lobby][https://badges.gitter.im/KaushalModi/Lobby.svg]]
+#+MACRO: saythanks [[https://saythanks.io/to/kaushalmodi][https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg]]
+#+MACRO: user @[[https://github.com/$1][*$1*]]
+
+* Readme                                                             :readme:
+:PROPERTIES:
+:EXPORT_TITLE: Ox-Hugo: A carefully crafted Org exporter back-end for Hugo
+:EXPORT_FILE_NAME: README
+:END:
+{{{travis}}} {{{melpa}}} {{{GPLv3}}}
+
+{{{gitter}}} {{{saythanks}}}
+
+#+INCLUDE: "./ox-hugo-manual.org::#introduction" :only-contents t
+** Table of Contents                                                    :TOC:
+# TOC will be inserted here by `toc-org' package when running
+# `ox-hugo-export-gh-doc'.
+** Screenshots                                                   :noexport_1:
+#+INCLUDE: "./ox-hugo-manual.org::#screenshots_intro" :only-contents t
+#+INCLUDE: "./ox-hugo-manual.org::#screenshots" :only-contents t
+** Documentation
+=ox-hugo= uses *itself* to generate its documentation!
+
+https://ox-hugo.scripter.co/
+
+You can generate the same too! Simply clone this repo and do =make
+doc_md=.
+
+*Make sure you visit the above link to read more on:*
+- {{{doc(why-ox-hugo,Why =ox-hugo=?)}}}
+- {{{doc(auto-export-on-saving,Auto exporting to Markdown each time the Org file is saved)}}}
+- {{{doc(org-capture-setup,Using Org Capture to start a new blog post)}}}
+- .. and many more topics and examples
+*** Source of the Documentation site
+- [[https://raw.githubusercontent.com/kaushalmodi/ox-hugo/master/doc/ox-hugo-manual.org][Org source]]
+
+The documentation site is published by first using =ox-hugo= to
+export from Org to Markdown, and then finally =hugo=.
+/So no Markdown files are committed in the =doc/content/= directory./
+#+INCLUDE: "./ox-hugo-manual.org::#demo" :minlevel 2
+
+** Installation
+#+INCLUDE: "./ox-hugo-manual.org::#installation" :only-contents t
+** Usage
+#+INCLUDE: "./ox-hugo-manual.org::#usage" :only-contents t
+** Changelog                                                     :noexport_1:
+#+INCLUDE: "./ox-hugo-manual.org::#changelog" :only-contents t
+** Thanks
+#+INCLUDE: "./ox-hugo-manual.org::#thanks" :only-contents t
+* Contributing                                                 :contributing:
+:PROPERTIES:
+:EXPORT_TITLE: Contributing Guide
+:EXPORT_FILE_NAME: CONTRIBUTING
+:END:
+#+INCLUDE: "./ox-hugo-manual.org::#note-to-future-contributors" :only-contents t
+** Debug
+#+INCLUDE: "./ox-hugo-manual.org::#debug" :only-contents t
+** Test
+#+INCLUDE: "./ox-hugo-manual.org::#test" :only-contents t
