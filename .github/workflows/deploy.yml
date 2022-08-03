@@ -31,9 +31,7 @@ jobs:
     - name: Export Org file to Markdown
       run: |
         emacs ./content.org --batch -L ./ox-hugo -l ox-hugo.el --eval='(org-hugo-export-wim-to-md t)' --kill
-        # Rename the "posts" folder to "post" (since most themes use that instead)
-        ls content
-        #mv content/posts content/post
+        mv content/posts content/post
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2.4.13

@@ -1,5 +1,5 @@
 #+title: Content
-#+HUGO_BASE_DIR: ~/Documents/GitHub/blog.dotslashsteve.sh
+#+HUGO_BASE_DIR: ./
 #+AUTHOR: Steve Tautonico
 
 
