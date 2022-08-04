@@ -3,12 +3,14 @@
 #+AUTHOR: Steve Tautonico
 
 
-* Blog Post name
+
+* Blog Post
 :properties:
 :export_file_name: blog-post-name-in-url
 :export_description: my cool post
 :export_date: 2021-10-18
 :export_author: your name
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :unlisted true
 :end:
 post's content !
 
@@ -65,6 +67,7 @@ All done!
 :export_description: my second cool post
 :export_date: 2022-08-03
 :export_author: Steve Tautonico
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :unlisted true
 :end:
 
 
