@@ -1,0 +1,77 @@
+<!doctype html><html lang=en><head><title>./steve.sh | Blog</title><meta charset=utf-8><meta content="utf-8" http-equiv=encoding><meta name=viewport content="width=device-width,initial-scale=1"><meta name=format-detection content="telephone=no"><meta name=theme-color content="#000084"><link rel=icon href=https://blog.dotslashsteve.sh/favicon.ico><link rel=canonical href=https://blog.dotslashsteve.sh><meta content="Stop looking at my source code, there's nothing here for you"></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class=navbar-inner><div class=container><button type=button class="btn btn-navbar" data-toggle=collapse data-target=.nav-collapse></button>
+<a class=brand href=https://blog.dotslashsteve.sh>./steve.sh | Blog</a><div class="nav-collapse collapse"><ul class=nav><li><a href=/about/><span>About</span></a></li><li><a href=/posts/><span>Posts</span></a></li></ul></div></div></div></nav><div id=content class=container><div class="row-fluid navmargin"><div class=page-header><h1>Blog Post number 2 - Wed, Aug 3, 2022</h1></div><p class=lead>my second cool post</p><p>This is the example org-mode file used for the Denver Emacs org-mode
+introduction talk. Everything in this talk should work without any custom
+settings or installation with a reasonably recent Emacs version.</p><p>Let&rsquo;s start with a headline, this is kind of like Markdown&rsquo;s # character:</p><h2 id=this-is-an-example-headline>This is an example headline</h2><p>Text can be put into the headline. You can create another headline at the same
+level with another * character</p><h2 id=another-headline>Another headline</h2><p>Nesting headlines is as easy as adding another start</p><h3 id=nested-headline>Nested headline</h3><h3 id=another-nested-headline>Another nested headline</h3><h4 id=deeper>Deeper</h4><h3 id=another-headline>Another headline</h3><ul><li><p>Deeper&mldr;</p><ul><li>Deeper&mldr;..</li></ul></li></ul><h2 id=basic-markup>Basic markup</h2><p>You can really go as deep as you want. This is the general building block for
+org-mode navigation.</p><p>Next, let&rsquo;s talk about some markup</p><ul><li>underscores let you underline things</li><li><strong>stars add emphasis</strong></li><li><em>slashes are italics</em></li><li><del>pluses are strikethrough</del></li><li><code>equal signs are verbatim text</code></li><li><code>tildes can also be used</code></li></ul><p>You can generate lists with the <code>-</code> character (seen above), or create numbered
+ones:</p><ol><li>Number one thing</li><li>Number two thing</li><li>Number three</li></ol><h2 id=showing-and-hiding-headlines>Showing and hiding headlines</h2><p>You can hide the contents of a headline by putting the point (cursor) or it and
+hitting <code>TAB</code>.</p><p>You can also toggle hiding and showing of <strong>all</strong> headlines with <code>SHIFT-TAB</code>.</p><h2 id=tables>Tables</h2><p>Auto expanding tables are one of the coolest features of org-mode, because
+tables in Markdown just plain suck. In order to create a new table, you can
+start typing it manually, or press <code>C-c |</code>, which will prompt for the table&rsquo;s
+dimensions.</p><table><thead><tr><th>First Name</th><th>Last Name</th><th>Years using Emacs</th></tr></thead><tbody><tr><td>Lee</td><td>Hinman</td><td>5</td></tr><tr><td>Mike</td><td>Hunsinger</td><td>2</td></tr><tr><td>Daniel</td><td>Glauser</td><td>4</td></tr><tr><td>Really-long-first-name-guy</td><td>long-last-name-pers</td><td>1</td></tr></tbody></table><h2 id=org-mode-links>Org-mode links</h2><p>:PROPERTIES:&mldr;</p><p>In an org-mode file, you can press <code>C-c l</code> to store a pointer to wherever you
+are in the file. Then, with (or without) text highlighted hit <code>C-C C-l</code> to make
+it into a link.
+The example file for Magit
+If you don&rsquo;t want to store a pointer (ie, link to a website or something), you
+can just hit <code>C-c C-l</code> and type or paste the link. To manually create a link, do
+something like:</p><p>The Denver Emacs Meetup Group</p><p>Writequit site</p><p>Google&rsquo;s web site</p><p>(ignore the *_SRC blocks for now, we&rsquo;ll get there)</p><pre tabindex=0><code class=language-fundamental data-lang=fundamental>[[http://google.com/][Google]]
+</code></pre><p>You can link to files, images, websites, emails, irc, and all kinds of things.</p><h2 id=various-things-you-can-add-in-headers>Various things you can add in headers</h2><p>One of the most common uses for org-mode is a sort of &ldquo;task list&rdquo; or TODO list.
+Org-mode supports this by allowing markers in the headline for the state of a
+task. Let&rsquo;s look at an example:</p><h3 id=this-is-a-task-that-needs-doing>TODO This is a task that needs doing</h3><h3 id=another-todo-task>TODO Another todo task</h3><ul><li><input disabled type=checkbox> sub task one</li><li><input checked disabled type=checkbox> sub task two</li><li><input disabled type=checkbox> sub task three</li></ul><h3 id=learn-about-org-mode>Learn about org-mode</h3><h4 id=learn-todos>TODO learn todos</h4><h4 id=learn-other-stuff>TODO learn other stuff</h4><p>You can toggle each task in a list with the <code>C-c C-c</code> keyboard shortcut.</p><h3 id=i-ve-already-finished-this-one>DONE I&rsquo;ve already finished this one</h3><p>You can change the status of a task by hitting <code>C-c t</code> in the body of a task
+anywhere, which will prompt for the state to put it in.</p><p>You can create as many of these as you&rsquo;d like, for example (from my own config,
+use what works best for you, configuring them is a little out of scope right
+here) here&rsquo;s what I use:</p><h4 id=something-that-needs-doing>TODO something that needs doing</h4><h4 id=something-that-s-already-done>DONE something that&rsquo;s already done</h4><h4 id=inprogress-something-i-m-currently-doing>INPROGRESS something I&rsquo;m currently doing</h4><h4 id=waiting-waiting-for-someone-else-before-doing-anything>WAITING waiting for someone else before doing anything</h4><h4 id=needsreview-there-s-a-pr-for-this-it-needs-someone-to-look-at-it>NEEDSREVIEW there&rsquo;s a PR for this, it needs someone to look at it</h4><h4 id=hold-this-is-in-permanent-hold-until-further-notice>HOLD this is in permanent hold until further notice</h4><h4 id=cancelled-i-don-t-need-this-any-more>CANCELLED I don&rsquo;t need this any more</h4><h4 id=someday-i-d-like-to-do-this-someday-in-the-waaaaay-off-future>SOMEDAY I&rsquo;d like to do this someday in the waaaaay off future</h4><p>A lot of people just use &ldquo;TODO&rdquo; and &ldquo;DONE&rdquo; though.</p><h3 id=adding-tags-and-priorities>Adding tags and priorities</h3><p>You can add tags by putting them surrounded in &ldquo;:&rdquo; in the headline.
+Additionally, priorities</p><h4 id=headline-with-a-tag>Headline with a tag</h4><h4 id=another-tagged-headline>Another tagged headline</h4><h4 id=headline-with-multiple-tags>Headline with multiple tags</h4><p>Tags are just another way of organizing things.</p><h4 id=important-task>Important task</h4><h4 id=medium-task>Medium task</h4><h4 id=non-important-task>Non-important task</h4><p>Again you can configure these, or just use the 3 built in ones.</p><h3 id=task-with-sub-headlines>TODO [1/3] Task with sub headlines</h3><h4 id=finish-thing>TODO Finish thing</h4><h4 id=finish-that-other-thing>TODO Finish that other thing</h4><h4 id=done-with-a-thing>DONE Done with a thing</h4><h3 id=task-with-sub-headlines--percent-cookie>[33%] Task with sub headlines (percent cookie)</h3><h4 id=finish-thing>TODO Finish thing</h4><h4 id=finish-that-other-thing>TODO Finish that other thing</h4><h4 id=done-with-a-thing>DONE Done with a thing</h4><h2 id=the-todo-planner-payoff>The TODO-planner payoff</h2><p>:PROPERTIES:&mldr;
+So TODOs are all well and good, but what is a really neat feature is when you
+can easily capture new TODOs and display them easily.</p><p>In order to do this, let&rsquo;s configure a couple of Emacs options in your emacs init:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=display:flex><span>(require <span style=color:#e6db74>&#39;org</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e>;; Setup C-c c to capture new TODOs</span>
+</span></span><span style=display:flex><span>(global-set-key (kbd <span style=color:#e6db74>&#34;C-c c&#34;</span>) <span style=color:#e6db74>&#39;org-capture</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e>;; Setup a key bind for the agenda</span>
+</span></span><span style=display:flex><span>(global-set-key (kbd <span style=color:#e6db74>&#34;C-c a&#34;</span>) <span style=color:#e6db74>&#39;org-agenda</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e>;; Set up agenda to know about our file, you can use a list of files or</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;; directories here</span>
+</span></span><span style=display:flex><span>(setq org-agenda-files <span style=color:#f92672>&#39;</span>(<span style=color:#e6db74>&#34;~/todo.org&#34;</span>))
+</span></span><span style=display:flex><span><span style=color:#75715e>;; A new template</span>
+</span></span><span style=display:flex><span>(setq org-capture-templates
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;t&#34;</span> <span style=color:#e6db74>&#34;Todo&#34;</span> entry (file <span style=color:#e6db74>&#34;~/todo.org&#34;</span>)
+</span></span><span style=display:flex><span>	 <span style=color:#e6db74>&#34;* TODO %?\n%U\n&#34;</span>)))
+</span></span></code></pre></div><p>Now, hit <code>C-c c</code> to bring up the capture template list, then <code>t</code> to capture a
+new TODO item.</p><p>Once you&rsquo;ve captured a few TODOs, you can try out the agenda by hitting <code>C-c a</code>,
+which will prompt for what agenda you&rsquo;d like to see, for now hit <code>t</code> to see the
+TODO list agenda.</p><h2 id=exporting-an-org-mode-buffer>Exporting an org-mode buffer</h2><p>Org has a lot of export options, they are all contained behind a <code>C-c C-e</code>
+export backend, exporting to HTML, markdown, plain text, pdf, etc.</p><h2 id=show-off-other-features-of-org-mode-if-we-have-more-time>Show off other features of org-mode if we have more time</h2><p>Maybe not in excruciating detail, but we can show off the power and cover it in
+more detail at a later time:</p><ul><li>refiling (<code>org-refile</code>)</li><li>source code blocks</li><li>org-babel</li><li>clocking in/out</li><li>table formulas</li><li>custom agenda views</li><li>capturing notes (not just TODOs)</li><li>publishing projects remotely via TRAMP</li></ul><p>\(a + b\)</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-emacs-lisp data-lang=emacs-lisp><span style=display:flex><span>(defun my/function ()
+</span></span><span style=display:flex><span>  <span style=color:#e6db74>&#34;docstring&#34;</span>
+</span></span><span style=display:flex><span>  (interactive)
+</span></span><span style=display:flex><span>  (progn
+</span></span><span style=display:flex><span>    (<span style=color:#a6e22e>+</span> <span style=color:#ae81ff>1</span> <span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>    (<span style=color:#a6e22e>message</span> <span style=color:#e6db74>&#34;Hi&#34;</span>)))
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span>echo $data &gt; /tmp/foo
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> i in <span style=color:#e6db74>`</span>cat /tmp/foo<span style=color:#e6db74>`</span>; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>  echo $i
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span></code></pre></div><p></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span>echo <span style=color:#e6db74>&#34;hi&#34;</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span><span style=color:#75715e># do some things</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;stuff&#34;</span>
+</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;more stuff&#34;</span>
+</span></span><span style=display:flex><span>echo &lt;&lt;hi&gt;&gt;
+</span></span></code></pre></div><p>To enter and edit a block of text, use <code>C-c C-'</code></p><h4><a href=https://blog.dotslashsteve.sh>Back to Home</a></h4></div></div><footer class=container><hr class=soften><p>Made with my fork of <a href=https://gitlab.com/maxlefou/hugo.386>hugo.386 theme by Max le Fou</a> |
+&copy;
+<a href=https://dotslashsteve.sh target=_blank>Steve Tautonico</a>
+<span id=thisyear>2022</span>
+| Built with <a href=//gohugo.io target=_blank>Hugo</a></p><p class=text-center><a href=https://github.com/stautonico>GitHub</a></p></footer></body><link rel=stylesheet href=/css/bootstrap.css><link rel=stylesheet href=/css/bootstrap-responsive.css><link rel=stylesheet href=/css/style.css><script src=/js/jquery.js></script>
+<script src=/js/bootstrap-386.js></script>
+<script src=/js/bootstrap-transition.js></script>
+<script src=/js/bootstrap-alert.js></script>
+<script src=/js/bootstrap-modal.js></script>
+<script src=/js/bootstrap-dropdown.js></script>
+<script src=/js/bootstrap-scrollspy.js></script>
+<script src=/js/bootstrap-tab.js></script>
+<script src=/js/bootstrap-tooltip.js></script>
+<script src=/js/bootstrap-popover.js></script>
+<script src=/js/bootstrap-button.js></script>
+<script src=/js/bootstrap-collapse.js></script>
+<script src=/js/bootstrap-carousel.js></script>
+<script src=/js/bootstrap-typeahead.js></script>
+<script src=/js/bootstrap-affix.js></script>
+<script>_386={fastLoad:!1,onePass:!0,speedFactor:1.1};function ThisYear(){document.getElementById("thisyear").innerHTML=(new Date).getFullYear()}</script></html>
