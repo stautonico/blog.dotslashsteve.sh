@@ -3,325 +3,74 @@
 #+AUTHOR: Steve Tautonico
 
 
-
-* Blog Post
+* TODO My First Experience Developing for the Flipper Zero
 :properties:
-:export_file_name: blog-post-name-in-url
-:export_description: my cool post
-:export_date: 2021-10-18
-:export_author: your name
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :unlisted true
-:end:
-post's content !
-
-#+begin_src python :exports both
-def recurse(n, output):
-    if n > 100:
-        output += "All done!\n"
-        return output
-    else:
-        output += f"Working on {n}\n"
-        output = recurse(n+1, output)
-
-    return output
-
-return recurse(75, "")
-#+end_src
-
-#+RESULTS:
-#+begin_example
-Working on 75
-Working on 76
-Working on 77
-Working on 78
-Working on 79
-Working on 80
-Working on 81
-Working on 82
-Working on 83
-Working on 84
-Working on 85
-Working on 86
-Working on 87
-Working on 88
-Working on 89
-Working on 90
-Working on 91
-Working on 92
-Working on 93
-Working on 94
-Working on 95
-Working on 96
-Working on 97
-Working on 98
-Working on 99
-Working on 100
-All done!
-#+end_example
-
-
-
-* Blog Post number 2
-:properties:
-:export_file_name: blogpostnhumber2
-:export_description: my second cool post
-:export_date: 2022-08-03
-:export_author: Steve Tautonico
+:export_file_name: my-first-experience-developing-for-the-flipper-zero
+:export_description: Description goes here
+:export_date: 2022-08-07
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :unlisted true
 :end:
 
-
-This is the example org-mode file used for the Denver Emacs org-mode
-introduction talk. Everything in this talk should work without any custom
-settings or installation with a reasonably recent Emacs version.
-
-Let's start with a headline, this is kind of like Markdown's # character:
-
-** This is an example headline
-
-Text can be put into the headline. You can create another headline at the same
-level with another * character
-
-** Another headline
-Nesting headlines is as easy as adding another start
-
-*** Nested headline
-
-*** Another nested headline
-
-**** Deeper
-
-*** Another headline
-***** Deeper...
-
-****** Deeper.....
-
-** Basic markup
-
-You can really go as deep as you want. This is the general building block for
-org-mode navigation.
-
-Next, let's talk about some markup
-
-- _underscores let you underline things_
-- *stars add emphasis*
-- /slashes are italics/
-- +pluses are strikethrough+
-- =equal signs are verbatim text=
-- ~tildes can also be used~
-
-You can generate lists with the =-= character (seen above), or create numbered
-ones:
-
-1. Number one thing
-2. Number two thing
-3. Number three
-
-** Showing and hiding headlines
-
-You can hide the contents of a headline by putting the point (cursor) or it and
-hitting =TAB=.
-
-You can also toggle hiding and showing of *all* headlines with =SHIFT-TAB=.
-
-** Tables
-
-Auto expanding tables are one of the coolest features of org-mode, because
-tables in Markdown just plain suck. In order to create a new table, you can
-start typing it manually, or press =C-c |=, which will prompt for the table's
-dimensions.
-
-| First Name                 | Last Name           | Years using Emacs |
-|----------------------------+---------------------+-------------------|
-| Lee                        | Hinman              |                 5 |
-| Mike                       | Hunsinger           |                 2 |
-| Daniel                     | Glauser             |                 4 |
-| Really-long-first-name-guy | long-last-name-pers |                 1 |
-
-** Org-mode links
-:PROPERTIES:...
-
-In an org-mode file, you can press =C-c l= to store a pointer to wherever you
-are in the file. Then, with (or without) text highlighted hit =C-C C-l= to make
-it into a link.
-The example file for Magit
-If you don't want to store a pointer (ie, link to a website or something), you
-can just hit =C-c C-l= and type or paste the link. To manually create a link, do
-something like:
-
-The Denver Emacs Meetup Group
-
-Writequit site
-
-Google's web site
-
-(ignore the *_SRC blocks for now, we'll get there)
-
-#+BEGIN_SRC fundamental
-[[http://google.com/][Google]]
-#+END_SRC
-
-You can link to files, images, websites, emails, irc, and all kinds of things.
-
-** Various things you can add in headers
-
-One of the most common uses for org-mode is a sort of "task list" or TODO list.
-Org-mode supports this by allowing markers in the headline for the state of a
-task. Let's look at an example:
-
-*** TODO This is a task that needs doing
-
-*** TODO Another todo task
-- [ ] sub task one
-- [X] sub task two
-- [ ] sub task three
-
-*** Learn about org-mode
-
-**** TODO learn todos
-
-**** TODO learn other stuff
-
-You can toggle each task in a list with the =C-c C-c= keyboard shortcut.
-
-*** DONE I've already finished this one
-
-You can change the status of a task by hitting =C-c t= in the body of a task
-anywhere, which will prompt for the state to put it in.
-
-You can create as many of these as you'd like, for example (from my own config,
-use what works best for you, configuring them is a little out of scope right
-here) here's what I use:
-
-**** TODO something that needs doing
-**** DONE something that's already done
-**** INPROGRESS something I'm currently doing
-**** WAITING waiting for someone else before doing anything
-**** NEEDSREVIEW there's a PR for this, it needs someone to look at it
-**** HOLD this is in permanent hold until further notice
-**** CANCELLED I don't need this any more
-**** SOMEDAY I'd like to do this someday in the waaaaay off future
-
-A lot of people just use "TODO" and "DONE" though.
-
-*** Adding tags and priorities
-
-You can add tags by putting them surrounded in ":" in the headline.
-Additionally, priorities
-
-**** Headline with a tag :org:
-
-**** Another tagged headline :turing:denver:
-
-**** Headline with multiple tags :org:emacs:
-
-Tags are just another way of organizing things.
-
-**** [#A] Important task
-**** [#B] Medium task
-**** [#C] Non-important task
-
-Again you can configure these, or just use the 3 built in ones.
-*** TODO [1/3] Task with sub headlines
-**** TODO Finish thing
-**** TODO Finish that other thing
-**** DONE Done with a thing
-
-*** [33%] Task with sub headlines (percent cookie)
-**** TODO Finish thing
-**** TODO Finish that other thing
-**** DONE Done with a thing
-
-** The TODO-planner payoff
-:PROPERTIES:...
-So TODOs are all well and good, but what is a really neat feature is when you
-can easily capture new TODOs and display them easily.
-
-In order to do this, let's configure a couple of Emacs options in your emacs init:
-
-#+BEGIN_SRC emacs-lisp
-(require 'org)
-;; Setup C-c c to capture new TODOs
-(global-set-key (kbd "C-c c") 'org-capture)
-;; Setup a key bind for the agenda
-(global-set-key (kbd "C-c a") 'org-agenda)
-;; Set up agenda to know about our file, you can use a list of files or
-;; directories here
-(setq org-agenda-files '("~/todo.org"))
-;; A new template
-(setq org-capture-templates
-      '(("t" "Todo" entry (file "~/todo.org")
-         "* TODO %?\n%U\n")))
-#+END_SRC
-
-Now, hit =C-c c= to bring up the capture template list, then =t= to capture a
-new TODO item.
-
-Once you've captured a few TODOs, you can try out the agenda by hitting =C-c a=,
-which will prompt for what agenda you'd like to see, for now hit =t= to see the
-TODO list agenda.
-
-** Exporting an org-mode buffer
-
-Org has a lot of export options, they are all contained behind a =C-c C-e=
-export backend, exporting to HTML, markdown, plain text, pdf, etc.
-
-** Show off other features of org-mode if we have more time
-Maybe not in excruciating detail, but we can show off the power and cover it in
-more detail at a later time:
-
-- refiling (=org-refile=)
-- source code blocks
-- org-babel
-- clocking in/out
-- table formulas
-- custom agenda views
-- capturing notes (not just TODOs)
-- publishing projects remotely via TRAMP
-
-#+BEGIN_LaTeX
-$a + b$
-#+END_LaTeX
-
-#+BEGIN_SRC emacs-lisp
-(defun my/function ()
-  "docstring"
-  (interactive)
-  (progn
-    (+ 1 1)
-    (message "Hi")))
-#+END_SRC
-
-#+BEGIN_SRC sh :results table :var data="1 2 3 4"
-echo $data > /tmp/foo
-for i in `cat /tmp/foo`; do
-  echo $i
-done
-#+END_SRC
-
-#+RESULTS:
-| 1 |
-| 2 |
-| 3 |
-| 4 |
-
-#+NAME: say-hi
-#+BEGIN_SRC sh
-echo "hi"
-#+END_SRC
-
-#+NAME: hi
-#+RESULTS: say-hi
-: hi
-
-
-#+BEGIN_SRC sh
-# do some things
-echo "stuff"
-echo "more stuff"
-echo <<hi>>
-#+END_SRC
-
-#+RESULTS:
-
-To enter and edit a block of text, use =C-c C-'=
+** Preface
+For those who don't know, the [[https://flipperzero.one/][Flipper Zero]] is a little open source multi-tool
+device that is able to read/write/emulate several wireless protocols such as RFID, NFC, the sub-GHz frequency
+range, IR, and more. Since the flipper's firmware is open source, many developers in the community are currently
+expanding the official firmware with additional functionality by adding additional plugins and reworking existing features.
+One of these default features is the ability to act as a U2F key (over USB). My current U2F device is an (/unspecified/)
+hardware U2F and TOTP key combo. I wanted a backup just in case I lost my /unspecified/ hardware key. Using the Flipper
+(will be referred to as *f0* for the rest of this article) as a U2F key seemed like a decent idea since it was a default feature.
+However, it does not support TOTP by default. The f0 does have a RTC (real-time clock) chip on board, meaning it could
+theoretically support a TOTP app. Since the f0 is open source, I decided to try to write it myself.
+Note: I will only be discussing my experiences specifically related to the f0. Any issues I had due to my lack of knowledge of C will be left out.
+
+** Research
+Before programming anything, I needed to do some research in order to find out how to even begin programming an app for the f0.
+I quickly discovered that no official documentation is available, which made getting started really difficult. I tried asking
+the wonderful people of the [[http://flipperzero.one/discord][discord]] where to start. The most common piece of advice I got
+was to take a look at other people's apps and see how they were built. Looking around some firmware forks, I came across a simple
+[[https://gist.github.com/CompaqDisc/4e329c501bd03c1e801849b81f48ea61][clock app]] in the [[https://github.com/Eng1n33r/flipperzero-firmware][Unleashed firmware]].
+Another resource I was pointed to was [[https://flipper.atmanos.com/docs/overview/intro][Atmanos' Flipper Software Docs]]. This
+resource ended up being the most useful overall.
+
+The f0's firmware supports three different GUI paradigms:
+
+1. "/ViewPort/": Simple and very flexible, but no navigation helpers or default components, good for games/graphics applications due to full control of graphics
+2. "/ViewDispatcher and View/": Slightly more complex than /ViewPort/, but has the ability to use reusable views and navigation helpers (the one I ended up choosing)
+3. "/Scenes and Views/": The most complex and heavy, but ideal for complex apps.
+
+After doing a bit of research, I felt confident in my knowledge and began to program...
+
+** Prototyping
+Building a TOTP app for the f0 required two main components: the GUI interface and the TOTP implementation in the backend.
+
+Before I started, I asked the discord to see if anyone has already implemented TOTP. I was told that [[https://github.com/Astrrra][Astra]] had already
+built a little [[https://github.com/wetox-team/flipperzero-firmware/tree/gen-totp/applications/totp][TOTP demo]].
+Now that I knew the complex part of the project was done, all I needed to do was build a simple interface for this implementation.
+Little did I know that I would re-write the app three times over.
+
+During my first attempt, I started programming using the "/ViewPort/" GUI paradigm. This attempt ended quickly when I realized that I was
+unable to use the list of items, called the =VariableItemList= or the =Submenu= component (they slightly vary in behavior)
+
+During my second attempt, I tried using the "/Scenes and Views/" GUI paradigm. This paradigm was incredibly hard to wrap my head around.
+After a few hours of playing around with some code, I was able to get a simple demo working, but my code was polluted with random
+code from the prototyping process. At this point, I realized that this paradigm was way too complex for my needs.
+
+I went into my third attempt with a pretty decent understanding of how the first two paradigms work.
+From my understanding, the "/ViewDispatcher and View/" system has two main components: the view dispatcher and the views
+(if this wasn't already obvious from the name.) Views can be thought about like pages on a website. The views are similar to
+the setup in the "/ViewPort/" paradigm, except for the required =alloc= and =free= method. These views are registered with the
+view dispatcher component. This component is in charge of changing which view is currently on the screen. When the view dispatcher
+is instructed to set the current view, it calls the view's =alloc= function which allocates memory for the required components of the view
+(the view itself and the view model (similar to the view's state)), sets the context passed to the view, and sets up the callbacks for input,
+drawing, and more. Once the view dispatcher changes views, it calls the current view's =free= function, which is in charge of freeing any
+allocated memory in the view.
+
+I started programming, vaguely following along with the official flipper firmware [[https://github.com/flipperdevices/flipperzero-firmware/tree/dev/applications/debug_tools/display_test][display test program]]
+(as suggested by Atmanos's Docs) and was making good progress. The hardest of developing for the flipper seems to be trying to understand
+how all the components work together and just how apps are structured in general. Once you understand that, building a flipper app is relatively easy.
+Some official documentation on how this all worked would make getting started significantly easier (*wink wink, flipper team 😉*)
+
+# TODO!
+
+** Sources
+- [[https://flipper.atmanos.com/][Atmanos' Flipper Software Docs]]
